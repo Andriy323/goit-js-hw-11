@@ -47,7 +47,7 @@ async function creatFunction(e) {
 const lightbox = new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
   captionDelay: 250,
-  captionType: 'alt',
+  // captionType: 'alt',
 });
 
 async function functionTest(formData) {
@@ -85,7 +85,7 @@ const renderItems = ({ hits, totalHits }) => {
 
     return `
     
-    <div class="gallery-container" id="${id}">
+    <div class="gallery-container">
     <a class="gallery__link" href="${largeImageURL}">
       <img class="gallery-img" width="360px" height="360px" src="${webformatURL}" alt="${tags}"  />
       </a>
@@ -134,3 +134,20 @@ function onLoad(e) {
   console.log(inputValue);
   functionTest(inputValue);
 }
+
+
+
+///scroll
+
+// const options = {
+//   root: refs.list,
+//   rootMargin: '0px',
+//   threshold: 1.0
+// }
+
+// let x = e => {
+//   console.log(e)
+//   /* Content excerpted, show below */
+// };
+// var observer = new IntersectionObserver(x, options);
+// observer.observe(refs.btnLoad)
